@@ -3,7 +3,7 @@ About r-rlrsim
 
 Home: https://github.com/fabian-s/RLRsim
 
-Package license: GPL
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rlrsim-feedstock/blob/master/LICENSE.txt)
 
