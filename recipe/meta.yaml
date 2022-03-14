@@ -1,4 +1,4 @@
-{% set version = "3.1-6" %}
+{% set version = "3.1-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RLRsim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RLRsim/RLRsim_{{ version }}.tar.gz
-  sha256: 576be7e44549c76ffe00bcb815bf486475ea7393a98283ddd2d98122f28a73f2
+  sha256: 104a71619b7d59f43e743d58e7eb46aa125f84f64dfc1a09f8ce760149c6e502
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,8 +52,7 @@ test:
 about:
   home: https://github.com/fabian-s/RLRsim
   license: GPL-2.0-or-later
-  summary: Rapid, simulation-based exact (restricted) likelihood ratio tests for testing the presence of variance components/nonparametric terms for models fit with
-    nlme::lme(),lme4::lmer(), lmeTest::lmer(), gamm4::gamm4(), mgcv::gamm() and SemiPar::spm().
+  summary: Rapid, simulation-based exact (restricted) likelihood ratio tests for testing the presence of variance components/nonparametric terms for models fit with nlme::lme(),lme4::lmer(), lmeTest::lmer(), gamm4::gamm4(), mgcv::gamm() and SemiPar::spm().
   license_family: GPL
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
