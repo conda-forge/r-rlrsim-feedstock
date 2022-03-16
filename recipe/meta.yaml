@@ -1,4 +1,4 @@
-{% set version = "3.1-7" %}
+{% set version = "3.1-8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RLRsim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RLRsim/RLRsim_{{ version }}.tar.gz
-  sha256: 104a71619b7d59f43e743d58e7eb46aa125f84f64dfc1a09f8ce760149c6e502
+  sha256: 6adf1fbecf16a6118051efbb0956405770d794c33b4420b08b1d497718d5241a
 
 build:
   merge_build_host: true  # [win]
