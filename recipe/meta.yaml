@@ -1,6 +1,5 @@
 {% set version = "3.1-8" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rlrsim
@@ -13,8 +12,7 @@ source:
   sha256: 6adf1fbecf16a6118051efbb0956405770d794c33b4420b08b1d497718d5241a
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,8 +20,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('m2w64_cxx') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
@@ -38,7 +38,6 @@ requirements:
     - r-nlme
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.11.1
     - r-lme4 >=1.1
     - r-mgcv
