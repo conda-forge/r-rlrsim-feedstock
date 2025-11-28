@@ -1,4 +1,4 @@
-{% set version = "3.1-8" %}
+{% set version = "3.1-9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RLRsim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RLRsim/RLRsim_{{ version }}.tar.gz
-  sha256: 6adf1fbecf16a6118051efbb0956405770d794c33b4420b08b1d497718d5241a
+  sha256: f76b60eb0893b0afc4079d1e8a857fcf78e436b00800f6663ea2ba25dc2863f5
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
